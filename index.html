@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Optional</title>
+    <style>
+      body {
+        font-family: Arial;
+        font-size: 80%;
+      }
+
+      #wrapper {
+        width: 80%;
+        margin: 20px auto 0;
+      }
+
+      #add_product_form label {
+        display: block;
+        margin-top: 10px;
+      }
+
+      #add_product_form label span {
+        width: 150px;
+        display: inline-block;
+      }
+
+      #add_product_form .submit {
+        margin-top: 40px;
+      }
+
+      #add_product_form .submit input[type="button"] {
+        border-radius: 5px;
+        border: 1px solid #eeeeee;
+        padding: 10px;
+      }
+      .error{
+          border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="add_product_form">
+        <input type="text" id="id" hidden />
+        <label for="product_sku">
+          <span>Product SKU</span>
+          <input type="text" name="product_sku" id="product_sku" />
+        </label>
+        <label for="product_name">
+          <span>Product Name</span>
+          <input type="text" name="product_name" id="product_name" />
+        </label>
+        <label for="product_price">
+          <span>Product Price</span>
+          <input type="number" name="product_price" id="product_price" />
+        </label>
+        <label for="product_quantity">
+          <span>Product Quantity</span>
+          <input type="number" name="product_quantity" id="product_quantity" />
+        </label>
+        <p class="submit">
+          <input
+            type="button"
+            name="add_product"
+            id="add_product"
+            value="Add Product"
+            onclick="add()"
+          />
+        </p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
